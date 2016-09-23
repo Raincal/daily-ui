@@ -1,0 +1,23 @@
+<div *ngIf="show" class="Modal" [@flyInOut]>
+	<form (ngSubmit)="onSubmit(f)" class="ModalForm" #f="ngForm">
+
+		<div *ngFor="let model of models">
+      <div class="Input">
+				<input
+					id="{{model.id}}"
+					name="{{model.id}}"
+					type="{{model.type}}"
+					placeholder="{{model.placeholder}}"
+					autoComplete="false"
+					required
+          ngModel
+				/>
+				<label htmlFor="{{model.id}}"></label>
+			</div>
+		</div>
+
+		<button>
+      Log in <i class="fa fa-fw fa-chevron-right"></i>
+    </button>
+	</form>
+</div>
