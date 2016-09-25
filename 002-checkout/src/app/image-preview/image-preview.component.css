@@ -1,0 +1,44 @@
+.WorkspaceOverview {
+  color: white;
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  padding: 20px;
+}
+.WorkspaceOverview .WorkspaceInformation .WorkspaceName {
+  font-family: 'Playfair Display';
+  font-weight: 600;
+  font-size: 36px;
+}
+.WorkspaceOverview .WorkspaceInformation .WorkspacePrice {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-top: 20px;
+}
+.WorkspaceOverview .WorkspaceInformation .WorkspacePrice .Price {
+  font-size: 26px;
+  font-weight: 200;
+}
+.WorkspaceOverview .WorkspaceInformation .WorkspacePrice .Duration {
+  font-size: 16px;
+  font-weight: 300;
+  position: relative;
+  bottom: 2px;
+  margin-left: 5px;
+}
+.WorkspaceOverview .WorkspaceMeta {
+  color: white;
+  line-height: 1.6;
+  font-size: 13px;
+  font-weight: 300;
+  margin-top: 20px;
+}
+.WorkspaceOverview .WorkspaceMeta strong {
+  font-weight: 600;
+}

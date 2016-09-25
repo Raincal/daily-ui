@@ -1,0 +1,101 @@
+.App {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #17183B;
+}
+.App .Overlay {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
+  opacity: .2;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background: white;
+  z-index: 10;
+  padding: 20px !important;
+}
+
+.Container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 532px;
+  max-width: 650px;
+  z-index: 3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.ImagePreview {
+  background-image: url('assets/overlay.jpg');
+  background-size: cover;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  position: relative;
+  width: 50%;
+}
+.ImagePreview::before {
+  width: 100%;
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(23, 24, 59, 0) 0%, rgba(23, 24, 59, 0.45) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(23, 24, 59, 0) 0%, rgba(23, 24, 59, 0.45) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 );
+  /* IE6-9 */
+}
+
+.Checkout {
+  background: white;
+  width: 50%;
+}
+
+.overlay-enter {
+  opacity: 0.01;
+}
+
+.overlay-enter.overlay-enter-active {
+  opacity: .2;
+  -webkit-transition: opacity .5s ease .5s;
+  transition: opacity .5s ease .5s;
+}
+
+.container-enter {
+  opacity: 0.01;
+}
+
+.container-enter.container-enter-active {
+  opacity: 1;
+  -webkit-transition: opacity .5s ease;
+  transition: opacity .5s ease;
+}

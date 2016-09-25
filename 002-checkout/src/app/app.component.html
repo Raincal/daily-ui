@@ -1,0 +1,21 @@
+<div class="App">
+	<div class="Overlay" [@overlay] style="background-image: url('assets/overlay.jpg')"></div>
+
+	<div class="Container" [@container] *ngIf="state.active">
+		<app-image-preview
+      [duration]="1"
+      [state]="state"
+      class="ImagePreview"
+    ></app-image-preview>
+
+		<app-checkout
+      [duration]="duration.value"
+      [state]="state"
+      class="Checkout"
+    ></app-checkout>
+	</div>
+
+	<header>
+		<input ngModel #duration="ngModel" type="range" max="100" min="1" step="1" />
+	</header>
+</div>

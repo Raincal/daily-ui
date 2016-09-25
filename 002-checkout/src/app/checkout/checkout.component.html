@@ -1,0 +1,31 @@
+<div class="OrderSummary">
+	<div class="Title">Order Summary</div>
+	<table>
+		<tbody>
+			<tr>
+				<td>{{state.price}} x {{duration | pluralize: ['day', 'days']}}</td>
+				<td>{{initialTotal}} GBP</td>
+			</tr>
+			<tr>
+				<td>Discount</td>
+				<td>{{discount}} GBP</td>
+			</tr>
+			<tr>
+				<td>Subtotal</td>
+				<td>{{subTotal}} GBP</td>
+			</tr>
+			<tr>
+				<td>Tax</td>
+				<td>{{tax}} GBP</td>
+			</tr>
+		</tbody>
+	</table>
+	<div class="Total">
+		<div class="TotalLabel">Total</div>
+		<div class="Amount">
+			{{total}} <small>GBP</small>
+		</div>
+	</div>
+</div>
+
+<app-payment-form class="PaymentForm"></app-payment-form>
