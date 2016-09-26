@@ -1,0 +1,7 @@
+<div>
+  <app-header></app-header>
+  <app-hero class="AppHero"></app-hero>
+  <div class="List" *ngFor="let titleList of titleLists" style="padding: 20px 40px;">
+    <app-title-list [titleList]="titleList" class="TitleList"></app-title-list>
+  </div>
+</div>

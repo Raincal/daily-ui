@@ -1,0 +1,14 @@
+<div id="hero" class="Hero">
+	<div class="content">
+		<img class="logo" src="../../assets/narcos.logo.png" alt="" />
+		<h2>Season 2 now available</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque id quam sapiente unde voluptatum alias vero debitis,
+			magnam quis quod.</p>
+		<div class="button-wrapper">
+			<div *ngFor="let button of buttons">
+				<app-hero-button [button]="button"></app-hero-button>
+			</div>
+		</div>
+	</div>
+	<div class="overlay"></div>
+</div>
