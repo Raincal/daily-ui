@@ -1,5 +1,9 @@
 <p align="center">
-  <img src="./002-checkout.jpg"/>
+  <a href="http://checkout.raincal.top">
+    <img src="./002-checkout.jpg"/>
+    <br />
+    Live Demo
+  </a>
 </p>
 
 ## Installation
