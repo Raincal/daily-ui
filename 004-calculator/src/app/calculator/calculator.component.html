@@ -1,0 +1,17 @@
+<div class="App">
+  <div class="Display">
+    {{display}}
+  </div>
+
+	<div class="Buttons">
+		<div
+      *ngFor="let button of buttons"
+      class="Button"
+      [attr.data-size]="button.size || ''"
+      [attr.data-value]="button.value"
+      (click)="handleClick(button.value)"
+    >
+			{{button.label}}
+		</div>
+	</div>
+</div>
