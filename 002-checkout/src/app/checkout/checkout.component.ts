@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-checkout',
@@ -18,8 +18,8 @@ export class CheckoutComponent implements OnChanges {
   constructor() {
   }
 
-  ngOnChanges() {
-    this.duration = this.duration || this.state.duration;
+  ngOnChanges(changes: SimpleChanges) {
+    this.duration = changes['duration'].currentValue || this.state.duration;
     this.initialTotal = this.state.price * (this.duration);
     this.discount = Math.floor((this.initialTotal / 100) * this.state.discount);
     this.subTotal = this.initialTotal - this.discount;
