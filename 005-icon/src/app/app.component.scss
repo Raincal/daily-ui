@@ -1,0 +1,52 @@
+$iconSize: 480px;
+$sunSize: 96px;
+$mountainWidth: 510px;
+$mountainHeight: 180px;
+$mountainColor: #32323c;
+
+.mountain {
+  width: $mountainWidth;
+  height: $mountainHeight;
+  background: $mountainColor;
+  box-shadow: -16px 16px 90px darken($mountainColor, 20%);
+}
+
+.Icon {
+  width: $iconSize;
+  height: $iconSize;
+  border-radius: 100px;
+  background: linear-gradient(180deg, #e55858, #cc2626 60%);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    width: $sunSize;
+    height: $sunSize;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #f0d274, #e7bc50);
+    position: absolute;
+    left: 90px;
+    top: 90px;
+  }
+
+  .Mountain {
+    @extend .mountain;
+    position: relative;
+    transform: skew(30deg) rotate(-36deg) translate(-550px, 60px);
+
+    &::before {
+      @extend .mountain;
+      content: '';
+      position: absolute;
+      transform: translate(222px, 60px);
+    }
+
+    &::after {
+      @extend .mountain;
+      content: '';
+      position: absolute;
+      transform: translate(290px, 200px);
+    }
+  }
+}
