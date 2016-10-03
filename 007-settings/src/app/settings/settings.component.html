@@ -1,0 +1,20 @@
+<div class="MainWrapper">
+  <app-sidebar
+    (changeFilter)="changeFilter($event)"
+    [settings]="data.settings"
+    class="Sidebar"
+  ></app-sidebar>
+
+  <app-image-container
+    [settings]="data.settings"
+    [image]="data.image"
+    class="ImageContainer"
+  ></app-image-container>
+</div>
+
+<app-filter-list
+  (changeFilterMode)="changeFilterMode($event)"
+  [filters]="data.filters"
+  [image]="data.image"
+  class="FilterList"
+></app-filter-list>

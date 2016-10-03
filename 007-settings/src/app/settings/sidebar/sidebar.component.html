@@ -1,0 +1,28 @@
+<div class="Title">Angularagram v1.0</div>
+<div class="Setting" *ngFor="let setting of settings">
+	<label><div>{{setting.name}}</div><div>{{setting.value}}</div></label>
+	<input
+    *ngIf="setting.name == 'hue'"
+    min="-360"
+    max="360"
+    step="1"
+    type="range"
+    defaultValue="{{setting.value | slice:0:-3}}"
+	/>
+	<input
+    *ngIf="setting.name == 'contrast' || setting.name == 'brightness'"
+    min="0"
+    max="200"
+    step="1"
+    type="range"
+    defaultValue="{{setting.value | slice:0:-1}}"
+	/>
+	<input
+    *ngIf="setting.name == 'saturate' || setting.name == 'sepia'"
+    min="0"
+    max="100"
+    step="1"
+    type="range"
+    defaultValue="{{setting.value | slice:0:-1}}"
+	/>
+</div>

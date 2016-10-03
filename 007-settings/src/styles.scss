@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900');
+@import './assets/reset.css';
+
+$white: #FFFFFF;
+$sunsetorange: #F05D5E;
+$irresistable: #AF3B6E;
+$yankeesblue: #252D3F;
+$mediumspringgreen: #21FA90;
+
+@mixin mq($width) {
+	@media screen and (max-width: $width) {
+		@content;
+	}
+}
+
+.sk-double-bounce {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  margin: 400px auto;
+}
+.sk-double-bounce .sk-child {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: darken($sunsetorange, 20%);
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation: sk-doubleBounce 2s infinite ease-in-out;
+          animation: sk-doubleBounce 2s infinite ease-in-out;
+}
+.sk-double-bounce .sk-double-bounce2 {
+  -webkit-animation-delay: -1.0s;
+          animation-delay: -1.0s;
+}
+@-webkit-keyframes sk-doubleBounce {
+  0%, 100% {
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+@keyframes sk-doubleBounce {
+  0%, 100% {
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+.App {
+	align-items: center;
+	font-family: 'Lato', sans-serif;
+	display: flex;
+	font-weight: 300;
+	width: 100vw;
+	height: 100vh;
+	justify-content: center;
+	background: $yankeesblue;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.ImageBG {
+  background: url('./assets/13.jpg');
+	position: absolute;
+	top: -5vh;
+	left: -5vw;
+	width: 110vw;
+	height: 110vh;
+	background-size: cover;
+	filter: blur(15px);
+	opacity: 1;
+	mix-blend-mode: multiply;
+}
+
+.Settings {
+	width: 90vw;
+	height: 90vh;
+	position: relative;
+	z-index: 2;
+}
+
+.MainWrapper {
+	display: flex;
+	width: 100%;
+	height: 85%;
+
+	.Sidebar {
+		width: 30%;
+		max-width: 350px;
+		height: 100%;
+		background: rgba(lighten($yankeesblue, 5), .85);
+
+		@include mq(880px) {
+			display: none;
+		}
+
+		.Title {
+			width: 100%;
+			padding: 20px;
+			box-sizing: border-box;
+			border-bottom: 1px solid rgba($white, .1);
+			color: $white;
+			text-transform: uppercase;
+			font-weight: 600;
+			letter-spacing: .2em;
+			font-size: 12px;
+		}
+
+		.Setting {
+			padding: 0 20px;
+			margin-top: 20px;
+			border-bottom: 1px solid rgba($white, .05);
+
+			label {
+				font-weight: 400;
+				text-transform: uppercase;
+				color: $white;
+				display: flex;
+				justify-content: space-between;
+				margin-bottom: 5px;
+				font-size: 12px;
+				letter-spacing: .2em;
+				opacity: .5;
+			}
+
+			input {
+				width: 100%;
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	.ImageContainer {
+		width: 50%;
+		background: rgba(darken($yankeesblue, 5), .5);
+		display: flex;
+		flex: 1 0 auto;
+		justify-content: center;
+		align-items: center;
+
+		.Image {
+			height: 90%;
+			width: 90%;
+			background-size: cover;
+			box-shadow: 0 10px 20px rgba(black, .5);
+			background-position: center;
+			position: relative;
+			transition: filter .125s ease;
+
+			&::before {
+				content: '';
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				opacity: .3;
+			}
+
+			&::after {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				mix-blend-mode: overlay;
+				left: 0;
+				z-index: 3;
+				content: '';
+			}
+		}
+	}
+}
+.FilterList {
+	width: 100%;
+	height: calc(15% - 10px);
+	background: rgba(lighten($yankeesblue, 5), .45);
+	box-sizing: border-box;
+	padding: 20px;
+	display: flex;
+	overflow-x: auto;
+
+	.Filter {
+		width: 25%;
+		height: 100%;
+		position: relative;
+		flex: 1 0 1;
+		margin-right: 20px;
+		background: darken($yankeesblue, 2);
+		box-shadow: 0 10px 20px 0 rgba(black, .25);
+		transition: box-shadow .25s ease, transform .25s ease;
+
+		&:hover {
+			cursor:pointer;
+			box-shadow: 0 10px 20px -10px rgba(black, 1);
+			transform: scale(1.1);
+		}
+
+		&:last-child {
+			margin-right: 0px;
+		}
+
+		.Image {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-size: cover;
+			background-position: center;
+			transition: filter .25s ease .25s;
+		}
+	}
+}

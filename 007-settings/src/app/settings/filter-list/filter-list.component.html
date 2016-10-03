@@ -1,0 +1,7 @@
+<div class="Filter" *ngFor="let filter of filters" (click)="handleClick(filter.id)">
+  <div
+    class="Image"
+    [appFilterImage]="filter.settings"
+    [ngStyle]="setStyles()"
+  ></div>
+</div>
