@@ -16,9 +16,9 @@ export class FilterImageDirective {
       let filterString = '';
       settings.map((filter, i) => {
         if (filter.name === 'hue') {
-          filterString = `${filterString}hue-rotate(${filter.value})`;
+          filterString += `hue-rotate(${filter.value}deg)`;
         } else {
-          filterString = `${filterString}${filter.name}(${filter.value})`;
+          filterString += `${filter.name}(${filter.value}%)`;
         }
 
         return filterString;

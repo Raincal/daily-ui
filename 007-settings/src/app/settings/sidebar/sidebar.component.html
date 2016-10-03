@@ -7,7 +7,7 @@
     max="360"
     step="1"
     type="range"
-    defaultValue="{{setting.value | slice:0:-3}}"
+    defaultValue="{{setting.value}}"
 	/>
 	<input
     *ngIf="setting.name == 'contrast' || setting.name == 'brightness'"
@@ -15,7 +15,7 @@
     max="200"
     step="1"
     type="range"
-    defaultValue="{{setting.value | slice:0:-1}}"
+    defaultValue="{{setting.value}}"
 	/>
 	<input
     *ngIf="setting.name == 'saturate' || setting.name == 'sepia'"
@@ -23,6 +23,6 @@
     max="100"
     step="1"
     type="range"
-    defaultValue="{{setting.value | slice:0:-1}}"
+    defaultValue="{{setting.value}}"
 	/>
 </div>

@@ -11,7 +11,6 @@ export class SettingsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.data);
   }
 
   changeFilter() {
