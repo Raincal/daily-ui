@@ -1,0 +1,90 @@
+@import url('https://fonts.gmirror.org/css?family=Open+Sans:100,300,400,700,900');
+@import './assets/reset.css';
+
+$fontFamily: 'Open Sans';
+$fontColor:  white;
+$formHeight: 70px;
+
+.border {
+  border: 1px solid white;
+  background: transparent;
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  color: $fontColor;
+  text-align: center;
+  background: url('./assets/bg.jpg');
+  display: flex;
+  justify-content: center;
+
+  .Container {
+    margin: 250px auto;
+    font-family: $fontFamily;
+
+    .Error {
+      font-size: 202px;
+
+      i {
+        width: 152px;
+        height: 152px;
+        margin: 0 16px;
+        display: inline-block;
+        background: url('./assets/icon.png');
+      }
+    }
+
+    .Content {
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 48px;
+
+      a {
+        text-decoration: none;
+        color: #ffe600;
+        font-style: italic;
+        font-size: 14px;
+      }
+    }
+
+    .Form {
+      margin-top: 20px;
+
+      input {
+        @extend .border;
+        width: 570px;
+        height: $formHeight;
+        padding: 0 30px;
+        box-sizing: border-box;
+        font-size: 16px;
+        color: $fontColor;
+        outline: none;
+        font-weight: 100;
+      }
+
+      input::-webkit-input-placeholder {
+        color: $fontColor;
+      }
+
+      .Button {
+        display: inline-block;
+        width: 170px;
+        height: $formHeight;
+        margin-left: 30px;
+        background: #2a233d;
+        border: 1px solid transparent;
+        box-sizing: border-box;
+        line-height: $formHeight;
+        font-size: 16px;
+        font-weight: 100;
+        cursor: pointer;
+        transition: all .3s;
+
+        &:hover {
+          @extend .border;
+        }
+      }
+    }
+  }
+}
