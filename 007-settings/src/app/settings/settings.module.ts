@@ -4,14 +4,16 @@ import { SettingsComponent } from './settings.component';
 import { ImageContainerComponent } from './image-container';
 import { FilterListComponent } from './filter-list';
 import { SidebarComponent } from './sidebar';
-
+import { FormsModule } from '@angular/forms';
 import { FilterImageDirective } from './filter-image.directive';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   exports: [
+    FormsModule,
     SettingsComponent,
     FilterListComponent,
     SidebarComponent,

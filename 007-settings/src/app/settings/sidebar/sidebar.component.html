@@ -7,7 +7,9 @@
     max="360"
     step="1"
     type="range"
-    defaultValue="{{setting.value}}"
+    [ngModel]="setting.value"
+    (ngModelChange)="setting.value = filterChange($event, setting.name)"
+
 	/>
 	<input
     *ngIf="setting.name == 'contrast' || setting.name == 'brightness'"
@@ -15,7 +17,9 @@
     max="200"
     step="1"
     type="range"
-    defaultValue="{{setting.value}}"
+    [ngModel]="setting.value"
+    (ngModelChange)="setting.value = filterChange($event, setting.name)"
+
 	/>
 	<input
     *ngIf="setting.name == 'saturate' || setting.name == 'sepia'"
@@ -23,6 +27,8 @@
     max="100"
     step="1"
     type="range"
-    defaultValue="{{setting.value}}"
+    [ngModel]="setting.value"
+    (ngModelChange)="setting.value = filterChange($event, setting.name)"
+
 	/>
 </div>

@@ -7,10 +7,20 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
   @Input() settings;
+  @Output() changeFilter = new EventEmitter();
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  filterChange(value, name) {
+    const obj = {
+      name,
+      value
+    };
+    // this.changeFilter.emit(obj);
+    return value;
   }
 
 }
