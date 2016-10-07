@@ -40,7 +40,7 @@ body {
 
 		&:hover {
 			.Controls {
-				background: rgba($blue, .8);
+				background: rgba($blue, .5);
 			}
 		}
 
@@ -81,8 +81,8 @@ body {
 			text-transform: uppercase;
 			font-weight: 300;
 
-			&:hover {
-				background: lighten($blue, 5);
+			&.selected, &:hover {
+				background: lighten($blue, 20%);
 				cursor: pointer;
 				color: $dogwoodrose;
 
@@ -104,5 +104,7 @@ body {
         color: lighten(#5d4776, 10%);
 			}
 		}
+
+
 	}
 }
