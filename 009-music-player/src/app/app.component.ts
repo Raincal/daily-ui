@@ -37,8 +37,8 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.$audio = document.querySelector('audio');
-    this.currentMusic = this.tracks[0];
     this.musicNum = this.tracks.length;
+    this.onSelect(this.tracks[0]);
   }
 
   setStyles() {
@@ -66,7 +66,7 @@ export class AppComponent implements OnInit {
     }, 0);
   }
 
-  prev(id) {
+  prev(id: number): void {
     if (id === 1) {
       this.onSelect(this.tracks[this.musicNum - 1]);
     } else {
@@ -74,7 +74,7 @@ export class AppComponent implements OnInit {
     }
   }
 
-  next(id) {
+  next(id: number): void {
     if (id < this.musicNum) {
       this.onSelect(this.tracks[id]);
     } else {
