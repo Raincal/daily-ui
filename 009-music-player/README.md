@@ -1,6 +1,6 @@
 <p align="center">
   <a href="http://music-player.raincal.top">
-    <img src="./008-music-player.jpg"/>
+    <img src="./009-music-player.jpg"/>
     <br />
     Live Demo
   </a>

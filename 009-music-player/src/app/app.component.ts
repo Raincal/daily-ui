@@ -15,9 +15,9 @@ export class AppComponent implements OnInit {
     {
       id: 1,
       title: '深海少女',
-      artwork: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000000ozKnt4SROKF.jpg?max_age=2592000',
-      audioSrc: 'http://thirdparty.gtimg.com/C200001aTDok32S3qU.m4a?vkey=B1F5CED06AC066AA848190CD9517B18C3FB44D66CFC0DC4CEF92733828D9AFBDE8B5091325F9562A215684D226E0F34073730753B06914FB&guid=9646701960&fromtag=30',
-      duration: '03:34'
+      artwork: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000002KlTDP4YjTis.jpg?max_age=2592000',
+      audioSrc: 'http://thirdparty.gtimg.com/C200003jP7z03xuaXM.m4a?vkey=F8AC772EEEE5B49A097344FF3EBE09744C8874733BD2458D2E4656A209061D6F1432856B25D52E3CB8033A50B9361D870BB8818484559874&guid=9646701960&fromtag=30',
+      duration: '03:36'
     },
     {
       id: 2,
