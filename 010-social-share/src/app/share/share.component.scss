@@ -1,0 +1,17 @@
+.Icon {
+  width: 132px;
+  height: 132px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 100;
+
+  i {
+    font-size: 36px;
+    margin-bottom: 14px;
+  }
+}
