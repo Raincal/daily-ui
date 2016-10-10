@@ -36,7 +36,7 @@
 
     &.success {
       background: $successBtnColor;
-      box-shadow: 5px 5px 20px rgba(66, 232, 70, 0.7);
+      box-shadow: 5px 5px 20px rgba(66, 232, 70, .7);
     }
 
     &.error {
