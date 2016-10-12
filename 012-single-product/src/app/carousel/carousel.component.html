@@ -1,0 +1,19 @@
+<div
+  class="Images"
+  [attr.data-image]="currentImage"
+>
+	<div class="Dots">
+    <div
+      class="Dot"
+      *ngFor="let bgText of backgroundTexts; let i = index"
+      (click)="handleClick(i)"
+    ></div>
+	</div>
+
+	<div class="wrapper">
+		<div class="Image" *ngFor="let bgText of backgroundTexts; let i = index">
+			<div class="BGText" [innerHTML]="bgText"></div>
+			<img src="../../assets/0{{i + 1}}.png" alt="">
+		</div>
+	</div>
+</div>
